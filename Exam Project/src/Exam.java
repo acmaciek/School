@@ -6,9 +6,9 @@ import java.util.Collections;
 
 public class Exam {
 
-	ArrayList<Question> QuestionList; //Create list of Questions
-	String header; 
-	double totalPoints;
+	private ArrayList<Question> QuestionList; //Create list of Questions
+	private String header; 
+	private double totalPoints;
 	
 	Exam(String examHeader) {
 		header = examHeader;

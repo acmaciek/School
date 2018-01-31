@@ -5,9 +5,9 @@ import java.util.Collections;
 //mgirek2
 
 public class Question {
-	ArrayList<Answer> AnswerList; //Create list of answers
-	String question;
-	Double totalPoints;
+	private ArrayList<Answer> AnswerList; //Create list of answers
+	private String question;
+	private Double totalPoints;
 	
 	Question (String newQuestion) {
 		question = newQuestion;
@@ -23,16 +23,19 @@ public class Question {
 		System.out.println(question);
 		
 		for(Answer d:AnswerList) {
-            System.out.println(d.answer);
+            System.out.println(d.getAnswer());
         }
 	}
 	
 	void selectAnswer(int position) { //set answer at given position to true
-		AnswerList.get(position).answerChecked = true;
+		for(Answer d:AnswerList) {
+            d.setSelected(false);
+        }
+		AnswerList.get(position-1).setSelected(true);
 	}
 	
 	void unselectAnswer(int position) { //set answer at given position to false
-		AnswerList.get(position).answerChecked = false;
+		AnswerList.get(position-1).setSelected(false);
 	}
 	
 	void reorderAnswers() { //shuffle answers

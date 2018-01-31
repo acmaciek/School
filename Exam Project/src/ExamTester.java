@@ -68,9 +68,10 @@ public class ExamTester {
 		ex1.addQuestion(q2);
 		ex1.addQuestion(q3);
 		
-		e1.setSelected(true); //Choose answers
-		c2.setSelected(true);
-		d3.setSelected(true);
+
+		q1.selectAnswer(5); //Select answers
+		q2.selectAnswer(2);
+		q3.selectAnswer(1);
 		
 		System.out.println("Maciej Girek"); //Print info
 		System.out.println("mgirek2");
