@@ -1,0 +1,39 @@
+Sample Exam Title
+
+2018-05-01T13:50:50.150
+
+SAQuestion
+5.0
+What OO principle is implemented with private variables?
+Information Hiding
+MCSAQuestion
+5.0
+What do you put on a peanut butter and jelly sandwich?
+5
+0.5 Peanut butter
+0.5 Jelly
+0.0 Horseradish
+1.0 Peanut butter and jelly
+0.0 Onions
+
+MCMAQuestion
+5.0
+Who went to Hogwarts?  Circle all that apply:
+0.4
+5
+-0.2 Bilbo Baggins
+0.2 Harry Potter
+-0.2 Princess Leia
+0.2 Tom Riddle
+0.2 Rubeus Hagrid
+
+MCSAQuestion
+5.0
+WHAT IS MY NAME
+5
+5.0 Alex
+0.0 Maciek
+0.0 Tim
+0.0 saddasdsa
+0.0 dsaufasud0
+
