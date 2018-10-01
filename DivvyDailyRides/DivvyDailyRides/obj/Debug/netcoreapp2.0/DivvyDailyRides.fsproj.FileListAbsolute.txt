@@ -1,8 +1,0 @@
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\bin\Debug\netcoreapp2.0\DivvyDailyRides.deps.json
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\bin\Debug\netcoreapp2.0\DivvyDailyRides.runtimeconfig.json
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\bin\Debug\netcoreapp2.0\DivvyDailyRides.runtimeconfig.dev.json
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\bin\Debug\netcoreapp2.0\DivvyDailyRides.dll
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\bin\Debug\netcoreapp2.0\DivvyDailyRides.pdb
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\obj\Debug\netcoreapp2.0\DivvyDailyRides.fsprojResolveAssemblyReference.cache
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\obj\Debug\netcoreapp2.0\DivvyDailyRides.dll
-C:\Users\Maciek\Desktop\DivvyDailyRides\DivvyDailyRides\obj\Debug\netcoreapp2.0\DivvyDailyRides.pdb

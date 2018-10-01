@@ -1,0 +1,25 @@
+0: just run ./0
+1.First we start by running gdb ./1 we run disas comand to see what is inside the program and right away we can see the field password we set the breakpoint at password and step into it,inside password there are 2 main calls, its scanf and rand, scanf will scan user input and rand will generate random number, so we know right away we have to set a breakpoint at randinside rand we see callq random and that line is the most important in the whole program so we have to watch how the register rax changes as we step through the program we fianlly see that after executing random the value of rax registe changes from 0 to 1725744372, then we are asked to input the secret password , we insert the value we just copied from register rax , and booom !!! we get the beautiful message : "you win! the secret is:
+XFVaRlBd"
+2. When we enter ./2 we get the message "The password is "yes" without quotes if the call to curl_easy_perform was successful; the password is "no" without quotes if the call to curl_easy_perform as unsuccessful.
+You may not use gdb to answer this question." that right away tells us we need to us ltrace, after doing so we see that the exit status of curl_easy_perform is 0 therefore the call to it was performed successfult and out password is "yes" (without quotes)
+
+3.For this one we use ltrace ./3, and we get the message "checking for the existence of a "...checking for the existence of a file with a special name…", that gives a hint that the program is looking for some file, after doing gdb./3 we can conclude that program is looking for a file named iamspecial, so we create empty file named iamspecial with no extension
+after that we just run ./3 and like that we solve part 3 and we get another successful message "printf("%s%s\n", "you win! the secret is:\n", "X1RdR1Nc"you win! the secret is:
+X1RdR1Nc
+) = 33
++++ exited (status 0) +++"
+
+
+4: After running the file with ./4 we get "./4: error while loading shared libraries: lib361.so: cannot open shared object file: No such file or directory"
+at this point we know that the executable is looking for a lib361.so
+in order to generate .so file we have to have .c file.
+So now we create empty lib361.c, and compile it with gcc -o lib361 lib361.c to create an object file. Next we run gcc -shared -o lib361.so lib361.c to get .so file that the executable is looking for. After that we can create library path using command "setenv LD_LIBRARY_PATH /user/lib:"
+then we go back to our file and ltrace ./4
+Compilation fails and we get and error "secretoperation(3, 6, 0x7f72076b67a0, -1./4: symbol lookup error: ./4: undefined symbol: secretoperation
+ <no return ...>
++++ exited (status 127) +++"
+from this error we can conclude that our lib361.c program should have a function called secretoperation and that it should return something.After trial and error We figure that the function sectretoperation should pass some integer to a function and depending on its value we should reutrn 10 if value equals to 3 or 4 if else. after completing lib361.c file we compile it with gcc to get .so and ltrace ./4 where we can now see the message "printf("%s%s\n", "you win! the secret is:\n", "XlNcRFJT"you win! the secret is:
+XlNcRFJT
+) = 33"
+ 
